@@ -159,9 +159,11 @@ export default defineConfig({
 ```
 
 c) Create a Setup File for Global Configurations, setupTests.js<br/>
-`import '@testing-library/jest-dom';`<br/>
+`import '@testing-library/jest-dom';`<br/><br/>
+
 d) Change jest.fn() to vi.fn<br/>
-vi.fn() is Vitest's version of jest.fn()<br/>
+vi.fn() is Vitest's version of jest.fn()<br/><br/>
+
 e) Update package.json as below.<br/>
 
 ```

@@ -27,6 +27,11 @@ Open CMD and execute the command as below.<br/>
 ## 4. MODIFY FILES AND MAKE THEM ADAPT TO TYPESCRIPT FRAMEWORK
 
 a) Change vite.config.js to vite.config.ts.<br/>
+
+```javascript
+{ "some": "json" }
+```
+
 b) Add tsconfig.json and add the content in as below.<br/>
 
 ````json

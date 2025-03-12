@@ -51,7 +51,7 @@ b) Add tsconfig.json and add the content in as below.<br/>
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
-
+```
 
 c) Add tsconfig.node.json and add the content in as below.
 
@@ -65,7 +65,7 @@ c) Add tsconfig.node.json and add the content in as below.
   },
   "include": ["vite.config.ts"]
 }
-
+```
 
 d) Add vite-env.d.ts into scr/ folder and add the content in as below.<br/>
 `/// <reference types="vite/client" />`
@@ -96,6 +96,7 @@ import "@fontsource/open-sans/600.css"; // Specify weight<br/>
 import "@fontsource/open-sans/600-italic.css"; // Specify weight and style
 
 b) Update App.css as below.<br/>
+```
 #root {
 width: 100vw;
 height: 100vh;
@@ -106,6 +107,7 @@ text-align: left;
 button {
 outline: none !important;
 }
+```
 
 ## 7. ADD ENVIRONMENT VARIABLES
 
@@ -113,10 +115,14 @@ Vite has built-in support for loading environment variables.<br/>
 The variables can be created in the steps below.<br/>
 a) Create .env file<br/>
 All environment variables must be prefixed with "VITE\_"<br/>
+```
 VITE_QUERY_RESULT_URL=https://gist.githubusercontent.com/.../queryResult.json <br/>
 VITE_SUGGESTION_URL=https://gist.githubusercontent.com/.../suggestion.json <br/>
+```
 b) Call environment variables in tsx files <br/>
+```
 const variableA = import.meta.env.VITE_QUERY_RESULT_URL;
+```
 
 ## 8. ADD TESTING FEATURE INTO THE APP BY VITEST
 
@@ -125,6 +131,7 @@ a) Install dependencies<br/>
 `npm install --save-dev vitest @vitejs/plugin-react @testing-library/react @testing-library/jest-dom @testing-library/user-event`<br/>
 `npm install --save-dev jsdom`<br/>
 b) Configure vite.config.js<br/>
+```
 import { defineConfig } from 'vitest/config';<br/>
 import react from '@vitejs/plugin-react';<br/>
 export default defineConfig({<br/>
@@ -134,17 +141,20 @@ globals: true, // Use global functions like `describe`, `it`, `expect` without i
 environment: 'jsdom', // Use jsdom for simulating the browser environment<br/>
 setupFiles: './src/setupTests.js', // Optional: Create a setup file for global configuration (e.g., jest-dom)<br/>
 },<br/>
+```
 });<br/>
 c) Create a Setup File for Global Configurations, setupTests.js<br/>
 import '@testing-library/jest-dom';<br/>
 d) Change jest.fn() to vi.fn<br/>
 vi.fn() is Vitest's version of jest.fn()<br/>
 e) Update package.json as below.<br/>
+```
 "scripts": {<br/>
 "test": "vitest run", // Run tests once<br/>
 "test:watch": "vitest watch" // Watch for changes and re-run tests<br/>
 "test:coverage": "vitest -- --coverage" //run tests with coverage<br/>
 }<br/>
+```
 f) Run test by CMD command<br/>
 `npm run test`<br/>
 `npm run test:watch`<br/>

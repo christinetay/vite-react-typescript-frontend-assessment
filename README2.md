@@ -34,7 +34,7 @@ b) Add tsconfig.json and add the content in as below.<br/>
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": `"DOM", "DOM.Iterable", "ESNext"`,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -48,9 +48,10 @@ b) Add tsconfig.json and add the content in as below.<br/>
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": []"src"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
+
 
 c) Add tsconfig.node.json and add the content in as below.
 
@@ -64,6 +65,7 @@ c) Add tsconfig.node.json and add the content in as below.
   },
   "include": ["vite.config.ts"]
 }
+
 
 d) Add vite-env.d.ts into scr/ folder and add the content in as below.<br/>
 `/// <reference types="vite/client" />`

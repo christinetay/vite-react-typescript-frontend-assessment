@@ -1,21 +1,21 @@
 # HOW TO CREATE REACT APP WITH VITE BY SCRATCH [STEPS]
 
-VITE IS A BUILD TOOL WHICH IS SUITABLE TO BUILD REACTJS APP BY SCRATCH.  
+VITE IS A BUILD TOOL WHICH IS SUITABLE TO BUILD REACTJS APP BY SCRATCH.<br/>
 THE BELOW ARE THE STEPS.
 
 ## 1. INSTALL VITE PACKAGE WITH THE TEMPLATE OF REACT AND NAMED IT AS FRONTEND-APP2
 
-Open CMD and execute the command as below.  
+Open CMD and execute the command as below.<br/>
 [npm create vite@latest frontend-app2 -- --template react]
 
 ## 2. NAVIGATE TO THE SELECTED FOLDER AND INSTALL DEPENDENCIES, THEN RUN THE APP.
 
-Navigate to the frontend-app2 folder by the CMD command  
-[cd frontend-app2]
-Install all dependencies from package.json by the CMD command  
-[npm install]
+Navigate to the frontend-app2 folder by the CMD command<br/>
+[cd frontend-app2]<br/>
+Install all dependencies from package.json by the CMD command<br/>
+[npm install]<br/>
 Update package.json and add this line under "scripts".  
-["start": "vite"]
+["start": "vite"]  
 Run the app by the CMD command  
 [npm start]
 
@@ -29,37 +29,38 @@ Open CMD and execute the command as below.
 a) Change vite.config.js to vite.config.ts.  
 b) Add tsconfig.json and add the content in as below.  
 {  
-"compilerOptions": {  
-"target": "ESNext",  
-"useDefineForClassFields": true,  
-"lib": ["DOM", "DOM.Iterable", "ESNext"],  
-"allowJs": false,  
-"skipLibCheck": true,  
-"esModuleInterop": false,  
-"allowSyntheticDefaultImports": true,  
-"strict": true,  
-"forceConsistentCasingInFileNames": true,  
-"module": "ESNext",  
-"moduleResolution": "Node",  
-"resolveJsonModule": true,  
-"isolatedModules": true,  
-"noEmit": true,  
-"jsx": "react-jsx"  
-},  
-"include": ["src"],  
-"references": [{ "path": "./tsconfig.node.json" }]  
+ "compilerOptions": {  
+ "target": "ESNext",  
+ "useDefineForClassFields": true,  
+ "lib": ["DOM", "DOM.Iterable", "ESNext"],  
+ "allowJs": false,  
+ "skipLibCheck": true,  
+ "esModuleInterop": false,  
+ "allowSyntheticDefaultImports": true,  
+ "strict": true,  
+ "forceConsistentCasingInFileNames": true,  
+ "module": "ESNext",  
+ "moduleResolution": "Node",  
+ "resolveJsonModule": true,  
+ "isolatedModules": true,  
+ "noEmit": true,  
+ "jsx": "react-jsx"  
+ },  
+ "include": ["src"],  
+ "references": [{ "path": "./tsconfig.node.json" }]  
 }  
 c) Add tsconfig.node.json and add the content in as below.
 {  
-"compilerOptions": {  
-"composite": true,  
-"module": "ESNext",  
-"moduleResolution": "Node",  
-"allowSyntheticDefaultImports": true  
-},  
-"include": ["vite.config.ts"]  
+ "compilerOptions": {  
+ "composite": true,  
+ "module": "ESNext",  
+ "moduleResolution": "Node",  
+ "allowSyntheticDefaultImports": true  
+ },  
+ "include": ["vite.config.ts"]  
 }  
-d) Add vite-env.d.ts into scr/ folder and add the content in as below.  
+d) Add vite-env.d.ts into scr/ folder and add the content in as below.<br/>
+`/// <reference types="vite/client" />`
 /// <reference types="vite/client" />
 
 ## 5. INSTALL MORE NPM PACKAGES INTO THE APP

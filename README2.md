@@ -1,4 +1,4 @@
-# HOW TO CREATE REACT APP WITH VITE BY SCRATCH `STEPS`
+# HOW TO CREATE REACT APP WITH VITE BY SCRATCH WITH STEPS BELOW
 
 VITE IS A BUILD TOOL WHICH IS SUITABLE TO BUILD REACTJS APP BY SCRATCH.<br/>
 THE BELOW ARE THE STEPS.
@@ -159,10 +159,10 @@ export default defineConfig({
 ```
 
 c) Create a Setup File for Global Configurations, setupTests.js<br/>
-`import '@testing-library/jest-dom';`<br/><br/>
+`import '@testing-library/jest-dom';`<br/>
 
 d) Change jest.fn() to vi.fn<br/>
-vi.fn() is Vitest's version of jest.fn()<br/><br/>
+vi.fn() is Vitest's version of jest.fn()<br/>
 
 e) Update package.json as below.<br/>
 

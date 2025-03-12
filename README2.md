@@ -89,29 +89,32 @@ Add the font of opens-sans<br/>
 ## 6. ADJUST THE FILES AFTER NPM PACKAGES INSTALLATION
 
 a) Import font-awesome packages into index.tsx<br/>
-import "@fontsource/source-sans-pro"; // Defaults to weight 400<br/>
-import "@fontsource/source-sans-pro/400.css"; // Specify weight<br/>
-import "@fontsource/source-sans-pro/400-italic.css"; // Specify weight and style<br/>
-import "@fontsource/source-sans-pro/600.css"; // Specify weight<br/>
-import "@fontsource/source-sans-pro/600-italic.css"; // Specify weight and style<br/>
-import "@fontsource/open-sans"; // Defaults to weight 400<br/>
-import "@fontsource/open-sans/400.css"; // Specify weight<br/>
-import "@fontsource/open-sans/400-italic.css"; // Specify weight and style<br/>
-import "@fontsource/open-sans/600.css"; // Specify weight<br/>
+
+```
+import "@fontsource/source-sans-pro"; // Defaults to weight 400
+import "@fontsource/source-sans-pro/400.css"; // Specify weight
+import "@fontsource/source-sans-pro/400-italic.css"; // Specify weight and style
+import "@fontsource/source-sans-pro/600.css"; // Specify weight
+import "@fontsource/source-sans-pro/600-italic.css"; // Specify weight and style
+import "@fontsource/open-sans"; // Defaults to weight 400
+import "@fontsource/open-sans/400.css"; // Specify weight
+import "@fontsource/open-sans/400-italic.css"; // Specify weight and style
+import "@fontsource/open-sans/600.css"; // Specify weight
 import "@fontsource/open-sans/600-italic.css"; // Specify weight and style
+```
 
 b) Update App.css as below.<br/>
 
 ```
 #root {
-width: 100vw;
-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 .App {
-text-align: left;
+  text-align: left;
 }
 button {
-outline: none !important;
+  outline: none !important;
 }
 ```
 
@@ -123,8 +126,8 @@ a) Create .env file<br/>
 All environment variables must be prefixed with "VITE\_"<br/>
 
 ```
-VITE_QUERY_RESULT_URL=https://gist.githubusercontent.com/.../queryResult.json <br/>
-VITE_SUGGESTION_URL=https://gist.githubusercontent.com/.../suggestion.json <br/>
+VITE_QUERY_RESULT_URL=https://gist.githubusercontent.com/.../queryResult.json
+VITE_SUGGESTION_URL=https://gist.githubusercontent.com/.../suggestion.json
 ```
 
 b) Call environment variables in tsx files <br/>
@@ -142,37 +145,34 @@ a) Install dependencies<br/>
 b) Configure vite.config.js<br/>
 
 ```
-import { defineConfig } from 'vitest/config';<br/>
-import react from '@vitejs/plugin-react';<br/>
-export default defineConfig({<br/>
-plugins: [react()],<br/>
-test: {<br/>
-globals: true, // Use global functions like `describe`, `it`, `expect` without imports<br/>
-environment: 'jsdom', // Use jsdom for simulating the browser environment<br/>
-setupFiles: './src/setupTests.js', // Optional: Create a setup file for global configuration (e.g., jest-dom)<br/>
-},<br/>
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    globals: true, // Use global functions like `describe`, `it`, `expect` without imports
+    environment: 'jsdom', // Use jsdom for simulating the browser environment
+    setupFiles: './src/setupTests.js', // Optional: Create a setup file for global configuration (e.g., jest-dom)
+  },
+});
 ```
 
-});<br/>
 c) Create a Setup File for Global Configurations, setupTests.js<br/>
-import '@testing-library/jest-dom';<br/>
+`import '@testing-library/jest-dom';`<br/>
 d) Change jest.fn() to vi.fn<br/>
 vi.fn() is Vitest's version of jest.fn()<br/>
 e) Update package.json as below.<br/>
 
 ```
-"scripts": {<br/>
-"test": "vitest run", // Run tests once<br/>
-"test:watch": "vitest watch" // Watch for changes and re-run tests<br/>
-"test:coverage": "vitest -- --coverage" //run tests with coverage<br/>
-}<br/>
+"scripts": {
+  "test": "vitest run", // Run tests once
+  "test:watch": "vitest watch" // Watch for changes and re-run tests
+  "test:coverage": "vitest -- --coverage" //run tests with coverage
+}
 ```
 
 f) Run test by CMD command<br/>
 `npm run test`<br/>
 `npm run test:watch`<br/>
 `npm run test:coverage`
-
-```
-
-```

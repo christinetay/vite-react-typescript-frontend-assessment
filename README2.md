@@ -50,7 +50,7 @@ b) Add tsconfig.json and add the content in as below.
  "references": [{ "path": "./tsconfig.node.json" }]  
 }  
 c) Add tsconfig.node.json and add the content in as below.
-{  
+`{  
  "compilerOptions": {  
  "composite": true,  
  "module": "ESNext",  
@@ -58,15 +58,14 @@ c) Add tsconfig.node.json and add the content in as below.
  "allowSyntheticDefaultImports": true  
  },  
  "include": ["vite.config.ts"]  
-}  
+}  `
 d) Add vite-env.d.ts into scr/ folder and add the content in as below.<br/>
 `/// <reference types="vite/client" />`
-/// <reference types="vite/client" />
 
 ## 5. INSTALL MORE NPM PACKAGES INTO THE APP
 
-Add react-select for select dropdown element  
-[npm i --save react-select]  
+Add react-select for select dropdown element<br/>
+`npm i --save react-select` <br/>
 Add html-react-parser for parse HTML to React parser that works on both the server (Node.js) and the client (browser)  
 [npm i --save html-react-parser]  
 Add the font of source-sans-pro  

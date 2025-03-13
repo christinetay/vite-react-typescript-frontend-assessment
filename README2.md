@@ -84,7 +84,7 @@ Add html-react-parser for parse HTML to React parser that works on both the serv
 Add the font of source-sans-pro<br/>
 `npm install @fontsource/source-sans-pro`<br/>
 Add the font of opens-sans<br/>
-`npm install @fontsource/opens-sans`
+`npm install @fontsource/open-sans`
 
 ## 6. ADJUST THE FILES AFTER NPM PACKAGES INSTALLATION
 
@@ -153,7 +153,7 @@ export default defineConfig({
   test: {
     globals: true, // Use global functions like `describe`, `it`, `expect` without imports
     environment: 'jsdom', // Use jsdom for simulating the browser environment
-    setupFiles: './src/setupTests.js', // Optional: Create a setup file for global configuration (e.g., jest-dom)
+    setupFiles: './src/setupTests.ts', // Optional: Create a setup file for global configuration (e.g., jest-dom)
   },
 });
 ```
